@@ -94,16 +94,79 @@ do
     Console.WriteLine();
     Console.WriteLine("Enter your selection number (or type Exit to exit the program)");
 
-    readResult = Console.ReadLine();
-    if (readResult != null)
+    menuSelection = Console.ReadLine();
+    if (menuSelection != null)
     {
-        menuSelection = readResult.ToLower();
-        Console.WriteLine($"You selected menu option {menuSelection}.");
-        Console.WriteLine("Press the Enter key to continue");
+        //Console.WriteLine($"You selected menu option {menuSelection}.");
+        //Console.WriteLine("Press the Enter key to continue");
+
+        // pause code execution
+        //readResult = Console.ReadLine();
+
+        switch (menuSelection)
+        {
+            case "1":
+                // List all of our current pet information
+                Console.WriteLine("this app feature is coming soon - please check back to see progress.");
+                Console.WriteLine("Press the Enter key to continue.");
+                readResult = Console.ReadLine();
+                break;
+
+            case "2":
+                // List all of our current pet information
+                Console.WriteLine("this app feature is coming soon - please check back to see progress.");
+                Console.WriteLine("Press the Enter key to continue.");
+                readResult = Console.ReadLine();
+                break;
+
+            case "3":
+                //  Ensure animal ages and physical descriptions are complete
+                Console.WriteLine("Challenge Project - please check back soon to see progress.");
+                Console.WriteLine("Press the Enter key to continue.");
+                readResult = Console.ReadLine();
+                break;
+
+            case "4":
+                //  Ensure animal nicknames and personality descriptions are complete
+                Console.WriteLine("Challenge Project - please check back soon to see progress.");
+                Console.WriteLine("Press the Enter key to continue.");
+                readResult = Console.ReadLine();
+                break;
+
+            case "5":
+                //  Edit an animal’s age
+                Console.WriteLine("Challenge Project - please check back soon to see progress.");
+                Console.WriteLine("Press the Enter key to continue.");
+                readResult = Console.ReadLine();
+                break;
+
+            case "6":
+                //  Edit an animal’s personality description
+                Console.WriteLine("Challenge Project - please check back soon to see progress.");
+                Console.WriteLine("Press the Enter key to continue.");
+                readResult = Console.ReadLine();
+                break;
+
+            case "7":
+                //  Display all cats with a specified characteristic
+                Console.WriteLine("Challenge Project - please check back soon to see progress.");
+                Console.WriteLine("Press the Enter key to continue.");
+                readResult = Console.ReadLine();
+                break;
+
+            case "8":
+                //  Display all dogs with a specified characteristic
+                Console.WriteLine("Challenge Project - please check back soon to see progress.");
+                Console.WriteLine("Press the Enter key to continue.");
+                readResult = Console.ReadLine();
+                break;
+
+            default:
+                break;
+        }
     }
 } while (menuSelection != "exit");
 
 
 
-// pause code execution
-readResult = Console.ReadLine();
+
