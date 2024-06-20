@@ -273,9 +273,33 @@ do
 
             case "3":
                 //  Ensure animal ages and physical descriptions are complete
-                Console.WriteLine("Challenge Project - please check back soon to see progress.");
-                Console.WriteLine("Press the Enter key to continue.");
-                readResult = Console.ReadLine();
+                // Console.WriteLine("Challenge Project - please check back soon to see progress.");
+                // Console.WriteLine("Press the Enter key to continue.");
+                // readResult = Console.ReadLine();
+
+
+                for (int i = 0; i < maxPets; i++)
+                {
+                    bool validAge = false;
+                    int petAge;
+                    var isParsable = Int32.TryParse(ourAnimals[i, 2], out petAge);
+                    if (ourAnimals[i, 2] == "Age: " && isParsable is false)
+                    {
+                        while (!validAge)
+                        {
+                            Console.WriteLine($"Enter age for {ourAnimals[i, 0]}");
+                            readResult = Console.ReadLine();
+                            if (readResult != null)
+                            {
+                                ourAnimals[i, 2] = readResult;
+                            }
+                            var currentPet = ourAnimals[i, 2];
+                            validAge = true;
+                        }
+
+                    };
+                }
+
                 break;
 
             case "4":
