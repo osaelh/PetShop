@@ -1,4 +1,6 @@
 ﻿// the ourAnimals array will store the following: 
+using System.Net.NetworkInformation;
+
 string animalSpecies = "";
 string animalID = "";
 string animalAge = "";
@@ -282,19 +284,37 @@ do
                 {
                     bool validAge = false;
                     int petAge;
-                    var isParsable = Int32.TryParse(ourAnimals[i, 2], out petAge);
-                    if (ourAnimals[i, 2] == "Age: " && isParsable is false)
+
+
+
+                    if (ourAnimals[i, 2] == "Age: " || ourAnimals[i, 2] == "Age: ?")
                     {
                         while (!validAge)
                         {
-                            Console.WriteLine($"Enter age for {ourAnimals[i, 0]}");
+                            // Age Validation
+                            Console.WriteLine($"Enter an age for {ourAnimals[i, 0]}");
                             readResult = Console.ReadLine();
-                            if (readResult != null)
+                            var isParsable = Int32.TryParse(readResult, out petAge);
+                            if (readResult != null && isParsable)
                             {
-                                ourAnimals[i, 2] = readResult;
+                                ourAnimals[i, 2] = petAge.ToString();
+                                var currentPetAge = ourAnimals[i, 2];
+                                validAge = true;
                             }
-                            var currentPet = ourAnimals[i, 2];
-                            validAge = true;
+
+                            //Physical Description
+                            
+                            do
+                            {
+                                Console.WriteLine($"Enter a physical description for {ourAnimals[i, 0]} size, color, gender, weight, housebroken");
+                                readResult = Console.ReadLine();
+                                var test = readResult is null;
+                                if (readResult != "" && readResult != null)
+                                {
+                                    ourAnimals[i, 4] = readResult;
+                                }
+                            } while (readResult == "");
+
                         }
 
                     };
