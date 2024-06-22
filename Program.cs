@@ -303,7 +303,7 @@ do
                             }
 
                             //Physical Description
-                            
+
                             do
                             {
                                 Console.WriteLine($"Enter a physical description for {ourAnimals[i, 0]} size, color, gender, weight, housebroken");
@@ -324,9 +324,19 @@ do
 
             case "4":
                 //  Ensure animal nicknames and personality descriptions are complete
-                Console.WriteLine("Challenge Project - please check back soon to see progress.");
-                Console.WriteLine("Press the Enter key to continue.");
-                readResult = Console.ReadLine();
+                for (int i = 0; i < 6; i++)
+                {
+                    do
+                    {
+                        Console.WriteLine($"Enter a nickname for {ourAnimals[i, 0]}");
+                        readResult = Console.ReadLine();
+                    } while (readResult == "");
+                    do
+                    {
+                        Console.WriteLine($"Enter a personality description for {ourAnimals[i, 0]} (likes or dislikes, tricks, energy level)");
+                        readResult = Console.ReadLine();
+                    } while (readResult == "");
+                }
                 break;
 
             case "5":
