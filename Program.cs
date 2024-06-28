@@ -512,6 +512,61 @@ do
                 Console.WriteLine("\n\rPress the Enter key to continue");
                 readResult = Console.ReadLine();
 
+
+                // 1-- capture input.
+                // 2-- populate inputs as a string array.
+                // 2-- search dogs by the characterisics in the array.
+                // 3-- display the found dogs information.
+                // 4-- display not found if there is no match.
+
+                // string dogCharacteristics = "";
+
+                // while (dogCharacteristics == "")
+                // {
+                //     Console.WriteLine("Enter dog characteristics to search for separated by commas");
+                //     dogCharacteristics = Console.ReadLine();
+                // }
+
+                // string[] splitedDogCharacteristics = dogCharacteristics.Split(',');
+                // bool matchesAnyDog = false;
+                // bool matchesCurrentDog = false;
+
+                // for (var i = 0; i < maxPets; i++)
+                // {
+                //     if (ourAnimals[i, 1].Contains("dog"))
+                //     {
+                //         foreach (var term in splitedDogCharacteristics)
+                //         {
+                //             string handledTerm = term.Trim();
+
+                //             if (ourAnimals[i, 4].Contains(handledTerm))
+                //             {
+                //                 Console.WriteLine($"Our {ourAnimals[i, 0]} is a {term} match!");
+                //                 matchesCurrentDog = true;
+                //                 matchesAnyDog = true;
+                //             }
+                //             if (matchesCurrentDog)
+                //             {
+                //                 break;
+                //             }
+                //         }
+
+                //         if (matchesCurrentDog)
+                //         {
+                //             for (int j = 0; j < 7; j++)
+                //             {
+                //                 Console.WriteLine(ourAnimals[i, j]);
+                //             }
+                //         }
+                //     }
+
+                //     if (!matchesAnyDog)
+                //     {
+                //         Console.WriteLine("match not found");
+                //     }
+                // }
+
+
                 break;
 
             default:
